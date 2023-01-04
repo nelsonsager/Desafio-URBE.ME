@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+HomePage Desafio URBE.ME
+{% endblock %}
+
+{% block content %}
+<header class="min-h-screen bg-black bg-opacity-25 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"  style="background-image: url('{% static 'images/background.jpeg' %}');">
+    <div class="z-10 h-full py-32 md:py-0 text-grey-100 text-center flex items-center flex-col">
+
+        <h1 class="font-semibold text-black text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+            A primeira empresa de croundfounding imobiliário do Brasil.
+        </h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="font-semibold text-3xl text-black md:text-3xl py-5 text-center">
+            Conheça nossos investimentos.
+        </h3>
+        <div class="w-full flex justify-center">
+            <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                <form method="post" class="w-6/12 justify-center">
+                    <div class="flex flex-col items-center">
+                        <a href="{% url 'incorporador:homeincorporador' %}"
+                    <button class="bg-blue-500 font-medium hover:bg-blue-700 text-white md:font-normal flex justify-center items-center font-bold py-2 px-4 rounded md:text-2xl" type="submit">
+                        <span>
+                            Clique aqui
+                        </span>
+                        <ion-icon name="chevron-forward-outline" class="text-xl"></ion-icon>
+                    </button>
+                         </a>
+                    </div>
+                </form>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Projetos
+        </h2>
+        <h5 class="md:text-xl text-justify text-lg">
+            Através da URBE.ME, você tem acesso a um mercado antes acessível apenas aos grandes investidores: a etapa mais rentável do mercado imobiliário que é a incorporação do empreendimento.
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src="{% static 'images/projetos.png' %}" class="w-8/12" alt="">
+    </div>
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class='md:w-1/2 flex justify-center items-center '>
+        <img src="{% static 'images/rentabilidade.png' %}" class="w-8/12" alt="">
+    </div>
+
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            No que você está investindo
+        </h2>
+        <h5 class="md:text-xl text-justify text-lg">
+            Ao investir em algum empreendimento via URBE.ME, o investidor adquire um título de dívida chamado Cédula de Crédito Bancário (CCB) da incorporadora que contempla uma rentabilidade pré-fixada (rentabilidade mínima da operação) e ainda o direito a uma participação percentual no VGV (Valor Geral de Vendas) do empreendimento. Assim, os investidores passam a ser credores do projeto.
+        </h5>
+    </div>
+    
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Sobre nós
+        </h2>
+        <h5 class="md:text-xl text-justify text-lg">
+            A URBE.ME é uma plataforma de investimento coletivo online voltada para o setor imobiliário. Surgimos em 2015 com o intuito de simplificar, desburocratizar e democratizar o investimento em imóveis. Através da nossa plataforma, você conta com toda a expertise do nosso time de análise e curadoria dos projetos, podendo tomar a decisão de investir em questão de minutos e 100% online com um aporte de capital a partir de R$ 1.000,00.
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src="{% static 'images/sobre.png' %}" class="w-8/12" alt="">
+    </div>
+</section>
+<footer class=" px-6 py-15 ">
+    <ul class="flex justify-between items-center">
+        
+        <li>&copy; 2023</li>
+        <li> Feito com Python (Django)</li>
+        <li>Nelson</li>
+    </ul>
+</footer>
+
+{% endblock %}
